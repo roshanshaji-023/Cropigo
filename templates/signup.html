@@ -1,0 +1,23 @@
+{% include 'public_header.html' %}
+<title>Signup page</title>
+<section class="signup">
+    <br><br>
+    <h1>Create an Account</h1>
+    <br><br>
+    <div class="signup-form">
+        <form action="" method="post" >
+            <br>
+            <h3>Cropi<span style="color: #2ed47b;">Go</span> - lets farm better way</h3><br><br>
+            <label for="name">Full name <input type="text" name="name" required></label>
+            <br><br><br>
+            <label for="email">Email Id&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email"></label>
+            <br><br><br>
+            <label for="username">Username <input type="text" name="username" required></label>
+            <br><br><br>
+            <label for="password">Password <input type="text" name="password" required minlength="8"></label>
+            <br><br><br>
+            <button name="signup">Sign Up</button><br><br><br>
+        </form>
+    </div>
+</section>
+{% include 'footer.html' %}

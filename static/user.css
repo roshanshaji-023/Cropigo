@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{  margin: 0%;
+    padding: 0%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+    
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-thumb {
+     background:  rgb(138, 138, 138);;
+     border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+     background: #ffffff; 
+}
+::selection {
+    color: rgb(255, 255, 255);
+    background: rgb(147, 248, 147);
+}
+.user-dashboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    min-height: 100vh;
+    background-color: #ffffff;
+    
+}
+.navbar{
+    width:98%;
+    min-height: 4vh;
+    margin: 1vh auto;
+    text-align: left;
+}
+.header{
+    width: 98%;
+    height: 30vh;
+    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+    margin: 2vh auto;
+    border-radius: 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}

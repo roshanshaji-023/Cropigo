@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{  margin: 0%;
+    padding: 0%;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+::-webkit-scrollbar-thumb {
+     background:  rgb(138, 138, 138);;
+     border-radius: 50px;
+}
+::-webkit-scrollbar-track {
+     background: #ffffff; 
+}
+::selection {
+    color: rgb(24, 23, 23);
+    background: rgb(147, 248, 147);
+  }
+.header{
+    display: flex;
+    width: 98%;
+    margin:3vh auto;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    background-color: #2ed47b;
+    border-radius: 5px;
+}
+.header .logo{
+    width: 40%;
+    text-align: left;
+    margin-left: -10%;
+}
+.header .nav_links{
+    width: 40%;
+    
+}
+.header .nav_links ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    align-content: center;
+    align-items: center;
+    margin: auto 5px;
+}
+.header .nav_links ul li,a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+.home_main{
+    min-height: 80vh;
+}
+.login{
+    min-height: 80vh;
+
+}
+.login-form{
+    box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 25%), -8px -8px 12px 0 rgb(244 244 244);
+    margin: 10vh auto;
+    width: 30%;
+    height: 40vh;
+    border-radius: 5px;
+    border-radius: 12px;
+}
+.signup-form{
+    box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 25%), -8px -8px 12px 0 rgb(244 244 244);
+    width:40%;
+    border-radius: 12px;
+    margin: auto;
+    text-align:center;
+}
+input[type=text],input[type=email] {
+    width: 40%;
+  
+    border: none;
+    border-bottom: 2px solid #2ed47b;
+}
+input[type=text]:focus,input[type=email]:focus {
+    outline: none;
+}
+button{
+    padding: 8px 25px;
+    border-radius:12px;
+    background-color: black;
+    color: rgb(43, 226, 98);
+}
+.signup{
+    min-height: 80vh;
+}
+.footer{
+    min-height: 30vh;
+    background-color: black;
+    color: white;
+}
