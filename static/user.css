@@ -44,12 +44,14 @@ body::-webkit-scrollbar {
 }
 .nav-logout{
     width: 5%;
+
 }
 .nav-logout a{
    text-decoration: none;
    color: #000;
    padding: 12px 14px;
    background-color: rgb(169, 255, 190);
+   border-radius: 5px;
 }
 .header{
     width: 98%;

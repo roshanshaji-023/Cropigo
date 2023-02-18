@@ -56,6 +56,25 @@ body::-webkit-scrollbar {
 .home_main{
     min-height: 80vh;
 }
+.home-section{
+    display: flex;
+    min-height: 70vh;
+}
+.home-content{
+    min-height: 40vh;
+    width: 40%;
+    margin: auto auto;
+   
+}
+.home-content h3,h4{
+    text-align: left;
+}
+.home-pic{
+    width: 40%;
+}
+.home-picture{
+    width: 70%;
+}
 .login{
     min-height: 80vh;
 
