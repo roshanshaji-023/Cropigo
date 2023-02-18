@@ -31,6 +31,14 @@ def login():
                     return redirect(url_for('user.userdashboard'))
     return render_template('login.html')
 
+# Make function for logout session
+@public.route('/logout')
+def logout():
+    session.pop('loggedin', None)
+    session.pop('userid', None)
+    session.pop('email', None)
+    return redirect('/')
+
 @public.route('/signup',methods=['get','post'])#/signup is name given for route
 def signup():
     if 'signup' in request.form:

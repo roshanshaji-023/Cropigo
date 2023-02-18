@@ -35,6 +35,21 @@ body::-webkit-scrollbar {
     min-height: 4vh;
     margin: 1vh auto;
     text-align: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.nav-welcome{
+    width: 95%;
+}
+.nav-logout{
+    width: 5%;
+}
+.nav-logout a{
+   text-decoration: none;
+   color: #000;
+   padding: 12px 14px;
+   background-color: rgb(169, 255, 190);
 }
 .header{
     width: 98%;
