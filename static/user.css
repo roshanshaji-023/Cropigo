@@ -41,6 +41,10 @@ body::-webkit-scrollbar {
 }
 .nav-welcome{
     width: 90%;
+    
+}
+.nav-welcome h3{
+    text-align: left;
 }
 .nav-logout{
     width: 6%;
