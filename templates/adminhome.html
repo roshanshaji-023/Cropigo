@@ -1,18 +1,58 @@
 {% include 'adminhead.html'%}
     
 <section class="admin-dashboard">
-    <br><br>
-    <h1>Cropigo Admin home page</h1>
-    <h3>Hey {{session.name}} ,Welcome!</h3>
-    <br><br>
-    <div class="adminpanel">
+    <div class="navbar">
+        <br>
+        <div class="nav-welcome">
+            <h3>Hey {{session.name}} ,Welcome!</h3>
+        </div>
+        <div class="nav-logout">
+            <h4><a href="/logout">Logout</a></h4> 
+        </div>
+        
+    </div>
+    <div class="header">
+        <br><br>
         <div>
+            <h2>Cropi<span style="color: #2ed47b;">Go</span> - lets farm in a  better way</h2>
+        </div>
+      
+    </div>
+    <br><br>
+    <div class="user-search-panel"><!-- user searching place-->
+        <div class="user-search-bar">
+
             <form action="" method="post">
+                <br><br>
+                <h3>Search for a User:</h3><br>
                 <label for="user-search-name">UserName:</label>
-                <input type="text" name="user-search-name">
+                <input type="text" name="user-search-name" placeholder="type 'all' for viewing all users">
                 <br><br><br>
                 <button type="submit" name="user-search">Search User</button>
             </form>
+        </div>
+    
+        <div class="user-data">
+            <table>
+                <thead>
+                <tr>
+                    <th>User ID</th>
+                    <th>UserName</th>
+                    <th>full_name</th>
+                    <th>email_id</th>
+                </tr>
+                </thead>    
+                <tbody>
+                {% for row in data %}    
+                        <tr>
+                            <td>{{row.id}}</td>
+                            <td>{{row.user_name}}</td>
+                            <td>{{row.full_name}}</td>
+                            <td>{{row.email_id}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
         </div>
     </div>
 

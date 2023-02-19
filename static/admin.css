@@ -21,13 +21,96 @@ body::-webkit-scrollbar {
     color: rgb(24, 23, 23);
     background: rgb(255, 251, 13);
   }
+
 .admin-dashboard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
     min-height: 100vh;
-    height: max-content;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     
 }
+.navbar{
+    width:98%;
+    min-height: 4vh;
+    margin: 1vh auto;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.nav-welcome{
+    width: 90%;
+    
+}
+.nav-welcome h3{
+    text-align: left;
+}
+.nav-logout{
+    width: 6%;
 
+}
+.nav-logout a{
+   text-decoration: none;
+   color: #000;
+   padding: 10px 14px;
+   background-color: rgb(182, 169, 255);
+   border-radius: 5px;
+}
+.header{
+    width: 98%;
+    height: 30vh;
+    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%, #673ab7 0%, #673ab7 15.9%, rgb(139 74 255) 15.9%, #673ab7 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+    margin: 2vh auto;
+    border-radius: 15px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+input[type=text],input[type=email] {
+    width: 30%;
+    text-align: left;
+    border: none;
+    border-bottom: 2px solid #892ed4;
+}
+input[type=text]:focus,input[type=email]:focus {
+    outline: none;
+}
+.user-search-panel{
+    display: flex;
+    width: 90%;
+    height: max-content;
+    
+    margin: auto auto;
+}
+.user-search-bar{
+    margin: auto auto;
+    width: 40%;
+    border: 1px solid black;
+    min-height: 20vh;
+    border-radius: 15px;
+}
+button{
+    padding: 8px 20px;
+    background-color: #673ab7;
+    border:0px;
+    border-radius: 10px;
+    color: white;
+}
+.user-data{
+    width: 40%;
+}
+table th,td {
+    width: 150px;
+    text-align: center;
+    border: 1px solid black;
+    padding: 5px;
+  }
 .footer{
     min-height: 30vh;
     background-color: black;
