@@ -1,4 +1,5 @@
-from flask import Flask,Blueprint,render_template,request
+from flask import *
+from database import *
 
 admin=Blueprint('admin',__name__) #creating blueprint for admin page
 
@@ -10,13 +11,7 @@ def adminhome():
         print(name,type)
     return render_template('adminhome.html')
 
-@admin.route('/adminlogin',methods=['get','post'])
-def adminlogin():
-    if 'login' in request.form:
-        name=request.form['username']
-        type=request.form['password']
-        print(name,type)
-    return render_template('adminlogin.html')
+
 
 
 

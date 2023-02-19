@@ -18,9 +18,11 @@ def login():
         q="select * from user_login where user_name='%s' and password='%s'"%(a,b)
         res=select(q)
         if res:
-            if res[0]['user_type']=="admin":
+            if res[0]['user_type']=="admin":#for admin login
+                session['loggedin'] = True
+                session['name'] = res[0]['full_name']
                 return redirect(url_for('admin.adminhome'))
-            elif res[0]['user_type']=="user":
+            elif res[0]['user_type']=="user": #for user login
                 uname=res[0]['user_name']
                 upassword=res[0]['password']
                 session['loggedin'] = True
@@ -37,6 +39,7 @@ def logout():
     session.pop('loggedin', None)
     session.pop('userid', None)
     session.pop('email', None)
+    session.pop('name', None)
     return redirect('/')
 
 @public.route('/signup',methods=['get','post'])#/signup is name given for route

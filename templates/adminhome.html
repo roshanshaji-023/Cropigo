@@ -3,7 +3,18 @@
 <section class="admin-dashboard">
     <br><br>
     <h1>Cropigo Admin home page</h1>
-
+    <h3>Hey {{session.name}} ,Welcome!</h3>
+    <br><br>
+    <div class="adminpanel">
+        <div>
+            <form action="" method="post">
+                <label for="user-search-name">UserName:</label>
+                <input type="text" name="user-search-name">
+                <br><br><br>
+                <button type="submit" name="user-search">Search User</button>
+            </form>
+        </div>
+    </div>
 
 </section>
 {% include 'footer.html'%}
