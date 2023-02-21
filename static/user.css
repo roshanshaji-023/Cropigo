@@ -60,7 +60,9 @@ body::-webkit-scrollbar {
 .header{
     width: 98%;
     height: 30vh;
-    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+    /*background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1) 66% );
+    */
+    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%, rgb(97 227 102) 0%, #27c52e 15.9%, rgb(77 255 91) 15.9%, #4caf50 24.4%, rgba(19,30,37,1) 24.5%, rgba(19,30,37,1));
     margin: 2vh auto;
     border-radius: 15px;
     color: #ffffff;
