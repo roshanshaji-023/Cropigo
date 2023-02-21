@@ -9,6 +9,10 @@ def home():
 
     return render_template('home.html')
 
+@public.route('/about')
+def about():
+    return render_template('about.html')
+
 @public.route('/login',methods=['get','post'])
 def login():
     if 'login' in request.form:

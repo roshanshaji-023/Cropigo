@@ -56,23 +56,26 @@ body::-webkit-scrollbar {
 .home_main{
     min-height: 80vh;
 }
-.home-section{
+.about_main{
+    min-height: 80vh;
+}
+.about-section{
     display: flex;
     min-height: 70vh;
 }
-.home-content{
+.about-content{
     min-height: 40vh;
     width: 44%;
     margin: auto auto;
    
 }
-.home-content h3,h4{
+.about-content h3,h4{
     text-align: left;
 }
-.home-pic{
+.about-pic{
     width: 40%;
 }
-.home-picture{
+.about-picture{
     width: 70%;
 }
 .login{
