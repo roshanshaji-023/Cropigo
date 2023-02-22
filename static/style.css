@@ -134,7 +134,7 @@ body{
     margin: auto;
     text-align:center;
 }
-input[type=text],input[type=email] {
+input[type=text],input[type=email],input[type=number] {
     width: 40%;
     text-align: left;
     border: none;
@@ -150,7 +150,7 @@ button{
     color: rgb(43, 226, 98);
 }
 .signup{
-    min-height: 80vh;
+    min-height: 100vh;
 }
 .footer{
     min-height: 30vh;

@@ -19,20 +19,28 @@ def login():
         a=request.form['username']
         b=request.form['password']
         print(a,b)
-        q="select * from user_login where user_name='%s' and password='%s'"%(a,b)
+        q="select * from login where user_name='%s' and password='%s'"%(a,b)
         res=select(q)
         if res:
+            print(res)
+            login_id=res[0]['login_id']
             if res[0]['user_type']=="admin":#for admin login
                 session['loggedin'] = True
-                session['name'] = res[0]['full_name']
+                session['name'] = res[0]['user_name']
+                
                 return redirect(url_for('admin.adminhome'))
             elif res[0]['user_type']=="user": #for user login
+                
+                p="select * from user where user_name='%s' and login_id='%s'"%(a,login_id)
+                res1=select(p)
                 uname=res[0]['user_name']
                 upassword=res[0]['password']
+               
                 session['loggedin'] = True
-                session['userid'] = res[0]['id']
-                session['name'] = res[0]['full_name']
-                session['email'] = res[0]['email_id']
+                session['name'] =res1[0]['full_name']
+                session['loginid']=res[0]['login_id']
+                session['userid']=res1[0]['user_id']
+                
                 if uname==a and upassword==b:
                     return redirect(url_for('user.userdashboard'))
     return render_template('login.html')
@@ -49,12 +57,16 @@ def logout():
 @public.route('/signup',methods=['get','post'])#/signup is name given for route
 def signup():
     if 'signup' in request.form:
-        n=request.form['name']
-        e=request.form['email']
-        q=request.form['username']
-        r=request.form['password']
-        print(n,e,q,r)
-        q="insert into user_login(user_type,user_name,password,full_name,email_id) values('user','%s','%s','%s','%s')"%(q,r,n,e)
+        name=request.form['name']
+        email=request.form['email']
+        username=request.form['username']
+        password=request.form['password']
+        place=request.form['place']
+        phone_number=request.form['phone_number']
+        
+        q="insert into login(user_type,user_name,password) values('user','%s','%s')"%(username,password)
+        res=insert(q)
+        q="insert into user(login_id,full_name,place,phone_number,email_id,user_name) values('%s','%s','%s','%s','%s','%s')"%(res,name,place,phone_number,email,username)
         res=insert(q)
         
     return render_template('signup.html')
