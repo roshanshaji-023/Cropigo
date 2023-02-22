@@ -67,7 +67,7 @@ def signup():
         q="insert into login(user_type,user_name,password) values('user','%s','%s')"%(username,password)
         res=insert(q)
         q="insert into user(login_id,full_name,place,phone_number,email_id,user_name) values('%s','%s','%s','%s','%s','%s')"%(res,name,place,phone_number,email,username)
-        res=insert(q)
+        insert(q)
         
     return render_template('signup.html')
 

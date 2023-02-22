@@ -22,13 +22,11 @@ body::-webkit-scrollbar {
     background: rgb(147, 248, 147);
 }
 .user-dashboard{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+
     align-content: flex-start;
     min-height: 100vh;
     background-color: #ffffff;
-    
+    height: max-content;
 }
 .navbar{
     width:98%;
@@ -70,3 +68,27 @@ body::-webkit-scrollbar {
     justify-content: center;
     flex-direction: row;
 }
+.dashboard-area{
+    min-height: 50vh;
+    height: max-content;
+    display: flex;
+    width: 95%;
+    margin: auto auto;
+    
+}
+.complaint{
+    width: 20%;
+    height: 7vh;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(248, 208, 147, 0.42);
+
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
