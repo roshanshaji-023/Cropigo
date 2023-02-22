@@ -21,13 +21,7 @@ body::-webkit-scrollbar {
     color: rgb(255, 255, 255);
     background: rgb(147, 248, 147);
 }
-.user-dashboard{
 
-    align-content: flex-start;
-    min-height: 100vh;
-    background-color: #ffffff;
-    height: max-content;
-}
 .navbar{
     width:98%;
     min-height: 4vh;
@@ -84,7 +78,7 @@ body::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(248, 208, 147, 0.42);
+    background-color: rgba(248, 216, 147, 0.42);
 
 }
 a{
@@ -92,3 +86,21 @@ a{
     color: black;
 }
 
+.complaint-dashboard{
+    min-height: 80vh;
+    margin: auto auto;
+    width:90%;
+    display: flex;
+}
+.complaint-space{
+    width: 40%;
+    height: 35vh;
+    
+}
+.complaint-dashboard button{
+    color: white;
+    padding: 9px 25px;
+    background-color: rgb(1, 18, 11);
+    border: .5px solid white;
+    border-radius: 7px;
+}

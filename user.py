@@ -5,3 +5,9 @@ user=Blueprint('user',__name__) #creating blueprint for user dashboard page@publ
 def userdashboard():
 
     return render_template('userdashboard.html')
+
+@user.route('/usercomplaints')
+def usercomplaints():
+    
+    return render_template('usercomplaints.html')
+    

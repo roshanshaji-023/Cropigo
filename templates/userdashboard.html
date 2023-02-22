@@ -1,44 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CropiGo - User</title>
-    <link rel="stylesheet" href="static/user.css">
-</head>
-<body>
-    <section class="user-dashboard">
-        <div class="navbar">
-            <br><br>
-            <div class="nav-welcome">
-                <h3>Hey {{session.name}} ,Welcome!</h3>
-            </div>
-            <div class="nav-logout">
-                <h4><a href="/logout">Logout</a></h4> 
-            </div>
-            
-        </div>
-        
-        <div class="header">
-            <br><br>
-            <div>
-                <h2>Cropi<span style="color: #2ed47b;">Go</span> - lets farm in a  better way</h2>
-            </div>
-          
-        </div>
-        <br><br><br>
-        <section class="dashboard-area">
-            <div class="complaint">
-                <a href=""> <h4>Querries and Messages</h4></a>
-            </div>
+<title>Cropigo -User</title>
+{% include 'userhead.html' %}
+<br><br><br>
+<section class="dashboard-area">
+    <div class="complaint">
+        <a href="usercomplaints"> <h4>Querries and Messages</h4></a>
+    </div>
 
-            <div></div>
+    <div></div>
 
-            <div></div>
+    <div></div>
 
-        </section>
+</section>
 
-    </section>
+</section><!--end of user-dashboard section-->
 </body>
 </html>
