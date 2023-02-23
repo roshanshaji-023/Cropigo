@@ -23,10 +23,10 @@ body::-webkit-scrollbar {
   }
 
 .admin-dashboard{
-    display: flex;
+    /*display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-content: flex-start;*/
     min-height: 100vh;
     background-color: #ffffff;
     
@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
 .navbar{
     width:98%;
     min-height: 4vh;
-    margin: 1vh auto;
+    margin: 1.8vh auto;
     text-align: left;
     display: flex;
     align-items: flex-end;
@@ -85,6 +85,7 @@ input[type=text]:focus,input[type=email]:focus {
     display: flex;
     width: 90%;
     height: max-content;
+    /*min-height: 20vh;*/
     margin: 5vh auto;
 }
 .user-search-bar{
@@ -109,6 +110,14 @@ table th,td {
     text-align: center;
     border: 1px solid black;
     padding: 5px;
+}
+.user-complaints{
+    height: max-content;
+    min-height: 30vh;
+}
+.user-complaints-panel{
+    display: flex;
+    
 }
 .footer{
     min-height: 30vh;
