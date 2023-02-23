@@ -3,14 +3,16 @@
 
 <br>
 <h3>Send your Querries and Complaints</h3>
-<br>
+<br><br>
+<a href="userdashboard" class="back">Back to Dashboard</a>
+<br><br>
 <section class="complaint-dashboard">
     <div class="complaint-space">
         <br><br>
         <form action="" method="post">
-            <h5>Type in your querries or comments ..</h5>
-            <br>
-            <textarea name="complaint-data"  cols="50" rows="5"></textarea>
+            <h3>Type in your querries or complaints ..</h3>
+            <br><br>
+            <textarea name="complaint-data"  cols="50" rows="1" required></textarea>
             <br><br>
             <button type="submit" name="complaint-submit">Submit Querry</button>
         </form>
@@ -18,6 +20,28 @@
     </div>
 
 
-    <div class="reply-space"></div>
+    <div class="reply-space">
+        <br><br>
+        <form action="" method="post">
+            <h3>Check For Reply message from admin</h3>
+            
+            <br><br><br>
+            <button type="submit" name="reply-check">Check Reply's</button>
+        </form>
+        <br><br>
+        
+    </div>
+
+    <div class="reply-data">
+            <br><br>
+        {% for row in data %}    
+            <h5>Date: {{row.date}}</h5><br>
+            <h4>Querry: {{row.complaint}}</h4><br>
+            <h4>Reply: {{row.reply}}</h4><br>
+            <p>----------------------------------------------------------------------------</p>
+            <br><br> 
+        {% endfor %}
+        
+    </div>
 </section>
 

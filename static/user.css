@@ -87,19 +87,29 @@ a{
     text-decoration: none;
     color: black;
 }
+.back{
+    text-decoration: none;
+    color: black;
+    padding: 15px 20px;
+    border-radius: 9px;
+    background-color: rgb(169, 255, 190);
+}
 
 .complaint-dashboard{
-    min-height: 80vh;
-    margin: auto auto;
-    width:90%;
+    min-height: 40vh;
+    margin: 5vh auto;
+    width:80%;
     display: flex;
+    height: max-content;
+}
+.complaint-dashboard>div{
+    width: 33.3%;
+    min-height: 35vh;
 }
 .complaint-space{
     width: 40%;
     height: 35vh;
-    margin: 5vh auto;
-    border: 1px solid black;
-    border-radius: 7px;
+    
 }
 
 .complaint-dashboard button{
@@ -108,4 +118,13 @@ a{
     background-color: rgb(1, 18, 11);
     border: .5px solid white;
     border-radius: 7px;
+}
+.reply-space{
+    width: 50%;
+    height: max-content;
+}
+
+.reply-data h5,h4,p{
+    text-align: left;
+    
 }

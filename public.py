@@ -35,7 +35,8 @@ def login():
                 res1=select(p)
                 uname=res[0]['user_name']
                 upassword=res[0]['password']
-               
+                
+
                 session['loggedin'] = True
                 session['name'] =res1[0]['full_name']
                 session['loginid']=res[0]['login_id']
