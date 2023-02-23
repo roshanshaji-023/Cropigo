@@ -15,6 +15,18 @@ def adminhome():
         res=select(q)
         print(res)
         return render_template('adminhome.html',data=res)
+    if 'complaint-check' in request.form:
+        c="select * from complaint where reply='pending'"
+        cmp=select(c)
+        return render_template('adminhome.html',complaint_data=cmp)
+    
+    if 'reply' in request.form:
+        reply=request.form['reply-message']
+        cid=request.form['complaintid']
+        q="update complaint SET reply='%s' WHERE complaint_id='%s'"%(reply,cid)
+        update(q)
+
+    
     return render_template('adminhome.html')
 
 

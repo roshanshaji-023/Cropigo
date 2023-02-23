@@ -59,13 +59,58 @@
             </table>
         </div>
     </div>
-    <br><br>
+    <br><br><br>
     <div class="user-complaints">
-        <h3>Check for Compliants from users</h3>
+        <h3>Check for Compliants from Users</h3>
+        <br><br>
         <div class="user-complaints-panel">
-            
+            <div class="view-complaint">
+                <br>
+                <br>
+                <form action="" method="post">
+                    <h4>View pending Querries:</h4><br><br>
+                    <button type="submit" name="complaint-check">Check Complaints</button>
+                </form>
+                <br>
+                <br>
+            </div>
+            <div class="complaint-table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Complaint ID</th>
+                        <th>Date</th>
+                        <th>Complaint</th>
+                    </tr>
+                    </thead>    
+                    <tbody>
+                        {% for row in complaint_data %}    
+                            <tr>
+                            <td>{{row.complaint_id}}</td>
+                            <td>{{row.date}}</td>
+                            <td>{{row.complaint}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="reply-area">
+                <br>
+                <form action="" method="post">
+                    <h5>Send reply for complaints from here:</h5><br><br>
+                        <label for="complaintid">Complait Id</label>
+                        <input type="text" name="complaintid"> <br><br>
+                        <label for="reply-message">Reply Message</label>
+                        <textarea name="reply-message" cols="20" rows="1"></textarea>
+                        <br><br>
+                        <button type="submit" name="reply">Send Reply</button>
+                </form>
+                <br><br>
+            </div>
         </div>
     </div>
+    <br><br><br>
 
 </section>
 {% include 'footer.html'%}
