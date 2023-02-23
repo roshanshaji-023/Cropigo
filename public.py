@@ -64,11 +64,19 @@ def signup():
         password=request.form['password']
         place=request.form['place']
         phone_number=request.form['phone_number']
-        
-        q="insert into login(user_type,user_name,password) values('user','%s','%s')"%(username,password)
-        res=insert(q)
-        q="insert into user(login_id,full_name,place,phone_number,email_id,user_name) values('%s','%s','%s','%s','%s','%s')"%(res,name,place,phone_number,email,username)
-        insert(q)
+
+        querry="select * from login where user_name='%s'"%(username)
+        result=select(querry)
+        if result:
+            message="Account Already Exists!"
+            return render_template('signup.html',message=message)
+        else:
+            q="insert into login(user_type,user_name,password) values('user','%s','%s')"%(username,password)
+            res=insert(q)
+            q="insert into user(login_id,full_name,place,phone_number,email_id,user_name) values('%s','%s','%s','%s','%s','%s')"%(res,name,place,phone_number,email,username)
+            insert(q)
+            message="Account Created Succesfully!!"
+            return render_template('signup.html',message=message)
         
     return render_template('signup.html')
 
