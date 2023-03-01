@@ -2,13 +2,13 @@ from flask import Flask,Blueprint,render_template,request, session,url_for,redir
 from datetime import date
 from database import *
 user=Blueprint('user',__name__) #creating blueprint for user dashboard page@public.route('/userdashboard')
-@user.route('/userdashboard')
+@user.route('/userdashboard',methods=['get','post'])
 def userdashboard():
     if 'crop-predict' in request.form:
         nitrogen=request.form['nitrogen']
         phosphorus=request.form['phosphorus']
         potassium=request.form['potassium']
-        temperature=request.form['temperatur']
+        temperature=request.form['temperature']
         humidity=request.form['humidity']
         ph=request.form['ph']
         
