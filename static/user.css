@@ -163,5 +163,5 @@ textarea:focus{
     padding: 8px 15px;
     background-color: #27c52e;
     border-radius: 7px;
-    border:1px solid green;
+    border:0px solid green;
 }

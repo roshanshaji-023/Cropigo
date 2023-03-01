@@ -4,7 +4,15 @@ from database import *
 user=Blueprint('user',__name__) #creating blueprint for user dashboard page@public.route('/userdashboard')
 @user.route('/userdashboard')
 def userdashboard():
-
+    if 'crop-predict' in request.form:
+        nitrogen=request.form['nitrogen']
+        phosphorus=request.form['phosphorus']
+        potassium=request.form['potassium']
+        temperature=request.form['temperatur']
+        humidity=request.form['humidity']
+        ph=request.form['ph']
+        
+        
     return render_template('userdashboard.html')
 
 @user.route('/usercomplaints',methods=['get','post'])
