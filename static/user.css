@@ -65,13 +65,25 @@ body::-webkit-scrollbar {
     flex-direction: row;
 }
 .dashboard-area{
-    min-height: 50vh;
+    min-height: 100vh;
     height: max-content;
     display: flex;
     width: 95%;
     margin: auto auto;
-    
+    justify-content: space-between;
+    align-items: flex-start;
 }
+input[type=text],input[type=email],input[type=number],textarea {
+    width: 40%;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #65d42e;
+}
+input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,textarea:focus {
+    outline: none;
+}
+
 .complaint{
     width: 20%;
     height: 7vh;
@@ -132,4 +144,24 @@ textarea:focus{
 .reply-data h5,h4,p{
     text-align: left;
     
+}
+.crop-recomendation{
+    min-height: 25vh;
+    width: 45%  ;
+    height: max-content;
+    background-color: #ffffff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(162, 248, 147, 0.42);
+}
+.crop-recomendation form{
+    text-align: left;
+}
+.crop-recomendation button{
+    padding: 8px 15px;
+    background-color: #27c52e;
+    border-radius: 7px;
+    border:1px solid green;
 }
