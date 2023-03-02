@@ -18,12 +18,13 @@ user=Blueprint('user',__name__) #creating blueprint for user dashboard page@publ
 @user.route('/userdashboard',methods=['get','post'])
 def userdashboard():
     if 'crop-predict' in request.form:
-        nitrogen=request.form['nitrogen']
-        phosphorus=request.form['phosphorus']
-        potassium=request.form['potassium']
-        temperature=request.form['temperature']
-        humidity=request.form['humidity']
-        ph=request.form['ph']
+        nitrogen=request.form.get('nitrogen',type=int)
+        phosphorus=request.form.get('phosphorus',type=int)
+        potassium=request.form.get('potassium',type=int)
+        temperature=request.form.get('temperature',type=float)
+        humidity=request.form.get('humidity',type=float)
+        ph=request.form.get('ph',type=float)
+        rainfall=request.form.get('rainfall',type=float)
         
         
         # Dump the trained Naive Bayes classifier with Pickle
@@ -32,11 +33,10 @@ def userdashboard():
 
         with  open(RF_pkl_filename, 'rb') as RF_Model_pkl:
             RF=pickle.load(RF_Model_pkl)
-        
-        data = np.array([[104,18, 30, 23.603016, 60.3, 6.7, 140.91]])
+        data = np.array([[nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall]])
         prediction = RF.predict(data)
         print(prediction)
-        result="The best to cultivate predicted is %s"%prediction
+        result="The best crop to cultivate predicted is %s"%prediction
         print(result)
         return render_template('userdashboard.html',data=result)
     return render_template('userdashboard.html')
