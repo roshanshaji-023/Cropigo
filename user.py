@@ -18,13 +18,12 @@ user=Blueprint('user',__name__) #creating blueprint for user dashboard page@publ
 @user.route('/userdashboard',methods=['get','post'])
 def userdashboard():
     if 'crop-predict' in request.form:
-        nitrogen=request.form.get('nitrogen',type=int)
-        phosphorus=request.form.get('phosphorus',type=int)
-        potassium=request.form.get('potassium',type=int)
-        temperature=request.form.get('temperature',type=float)
-        humidity=request.form.get('humidity',type=float)
-        ph=request.form.get('ph',type=float)
-        rainfall=request.form.get('rainfall',type=float)
+        nitrogen=request.form['nitrogen']
+        phosphorus=request.form['phosphorus']
+        potassium=request.form['potassium']
+        temperature=request.form['temperatur']
+        humidity=request.form['humidity']
+        ph=request.form['ph']
         
         
         # Dump the trained Naive Bayes classifier with Pickle
