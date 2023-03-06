@@ -37,7 +37,8 @@ def usercomplaints():
         print(res)
         return render_template('usercomplaints.html',data=res)
     return render_template('usercomplaints.html')
-    
+
+#general crop prediction by user inputs manually 
 @user.route('/gencropprediction',methods=['get','post'])
 def gencropprediction():
         if 'crop-predict' in request.form:
