@@ -15,29 +15,10 @@ import warnings
 warnings.filterwarnings('ignore')
 
 user=Blueprint('user',__name__) #creating blueprint for user dashboard page@public.route('/userdashboard')
+
 @user.route('/userdashboard',methods=['get','post'])
 def userdashboard():
-    if 'crop-predict' in request.form:
-        nitrogen=request.form.get('nitrogen',type=int)
-        phosphorus=request.form.get('phosphorus',type=int)
-        potassium=request.form.get('potassium',type=int)
-        temperature=request.form.get('temperature',type=float)
-        humidity=request.form.get('humidity',type=float)
-        ph=request.form.get('ph',type=float)
-        rainfall=request.form.get('rainfall',type=float)
-        
-        # Dump the trained Naive Bayes classifier with Pickle
-        RF_pkl_filename = 'static\RandomForest.pkl'
-        # Open the file to load pkl file
-
-        with  open(RF_pkl_filename, 'rb') as RF_Model_pkl:
-            RF=pickle.load(RF_Model_pkl)
-        data = np.array([[nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall]])
-        prediction = RF.predict(data)
-        print(prediction)
-        result="The best crop to cultivate predicted is %s"%prediction
-        print(result)
-        return render_template('userdashboard.html',data=result)
+    
     return render_template('userdashboard.html')
 
 @user.route('/usercomplaints',methods=['get','post'])
@@ -56,4 +37,29 @@ def usercomplaints():
         print(res)
         return render_template('usercomplaints.html',data=res)
     return render_template('usercomplaints.html')
+    
+@user.route('/gencropprediction',methods=['get','post'])
+def gencropprediction():
+        if 'crop-predict' in request.form:
+            nitrogen=request.form.get('nitrogen',type=int)
+            phosphorus=request.form.get('phosphorus',type=int)
+            potassium=request.form.get('potassium',type=int)
+            temperature=request.form.get('temperature',type=float)
+            humidity=request.form.get('humidity',type=float)
+            ph=request.form.get('ph',type=float)
+            rainfall=request.form.get('rainfall',type=float)
+            
+            # Dump the trained Naive Bayes classifier with Pickle
+            RF_pkl_filename = 'static\RandomForest.pkl'
+            # Open the file to load pkl file
+
+            with  open(RF_pkl_filename, 'rb') as RF_Model_pkl:
+                RF=pickle.load(RF_Model_pkl)
+            data = np.array([[nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall]])
+            prediction = RF.predict(data)
+            print(prediction)
+            result="The best crop to cultivate predicted is %s"%prediction[0]
+            print(result)
+            return render_template('/gencropprediction.html',data=result)
+        return render_template('/gencropprediction.html')
     
