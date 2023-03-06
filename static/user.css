@@ -93,7 +93,11 @@ input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,textarea
     align-items: center;
     justify-content: space-around;
     background-color: rgba(248, 216, 147, 0.42);
-
+    background-image: url(/static/images/undraw_chatting_re_j55r.svg);
+    background-position: right;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    
 }
 .gen-crop{
     width: 20%;
@@ -103,7 +107,11 @@ input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,textarea
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(147, 248, 161, 0.42);
+    background-color: rgba(47, 252, 74, 0.212);
+    background-image: url(/static/images/undraw_wishes_icyp.svg);
+    background-position: right;
+    background-size: 30%;
+    background-repeat: no-repeat;
 }
 a{
     text-decoration: none;
