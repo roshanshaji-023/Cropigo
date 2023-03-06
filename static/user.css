@@ -166,21 +166,21 @@ textarea:focus{
 .gen-crop-recomendation{
     min-height: 55vh;
     margin: auto auto;
-    width: 75%;
+    width: 80%;
     height: max-content;
     background-color: #ffffff;
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
 }
 .gen-crop-recomendation form{
     text-align: left;
 }
 .crop-predict{
     min-height: 25vh;
-    width: 80%;
+    width: 60%;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -196,4 +196,5 @@ textarea:focus{
 .gen-crop-result{
     min-height: 20vh;
     margin: 5vh auto;
+    width: 30%;
 }

@@ -59,7 +59,7 @@ def gencropprediction():
             data = np.array([[nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall]])
             prediction = RF.predict(data)
             print(prediction)
-            result="The best crop to cultivate predicted is %s"%prediction[0]
+            result="The best crop to cultivate predicted is %s!"%prediction[0]
             print(result)
             return render_template('/gencropprediction.html',data=result)
         return render_template('/gencropprediction.html')
