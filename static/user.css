@@ -85,8 +85,8 @@ input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,textarea
 }
 
 .complaint{
-    width: 20%;
-    height: 12vh;
+    width: 30%;
+    height: 15vh;
     background-color: #ffffff;
     border-radius: 15px;
     display: flex;
@@ -100,8 +100,8 @@ input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,textarea
     
 }
 .gen-crop{
-    width: 20%;
-    height: 12vh;
+    width: 30%;
+    height: 15vh;   
     background-color: #ffffff;
     border-radius: 15px;
     display: flex;
