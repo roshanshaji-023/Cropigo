@@ -201,3 +201,6 @@ textarea:focus{
     margin: 5vh auto;
     width: 30%;
 }
+.gen-crop-result h3,h4{
+    text-align: left;
+}

@@ -59,8 +59,19 @@ def gencropprediction():
             data = np.array([[nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall]])
             prediction = RF.predict(data)
             print(prediction)
-            result="The best crop to cultivate predicted is %s!"%prediction[0]
-            print(result)
-            return render_template('/gencropprediction.html',data=result)
+            crop=prediction[0]
+
+            # load the fertilizer and season dataset
+            fertilizer_season= pd.read_csv('static\cropfertilizer&season.csv')
+
+            fertilizer = fertilizer_season[fertilizer_season['Crop'] == crop]['Fertilizer'].values[0]
+            season = fertilizer_season[fertilizer_season['Crop'] == crop]['Season'].values[0]
+           
+            result_crop="The best crop to cultivate predicted is %s!"%crop
+            result_fertilizer="Fertilizers could be used : %s "%fertilizer
+            result_season="%s"%season
+            
+            
+            return render_template('/gencropprediction.html',crop=result_crop,fertilizer=result_fertilizer,season=result_season)
         return render_template('/gencropprediction.html')
     
