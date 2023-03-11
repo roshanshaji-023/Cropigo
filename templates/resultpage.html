@@ -1,0 +1,21 @@
+<title>Cropigo -result</title>
+{% include 'userhead.html' %}
+<br>
+<br><br>
+
+<a href="userdashboard" class="back">Back to Dashboard</a>
+<br><br>
+
+<div class="gen-crop-result">
+    <div class="result-img">
+        <img src="static\images\{{path}}" alt="predicted-crop-image" srcset="" class="cropimage">
+    </div>
+    <div class="result-data">
+        <h1>{{crop}}</h1>
+        <br>
+        <h3>The best crop to cultivate in your area predicted is {{crop}}!</h3><br>
+        <h3>Fertilizers could be used : </h3><h4>{{fertilizer}}</h4><br><br>
+        <h3>The season for cultivation: </h3><h4>{{season}}</h4>
+    </div>
+    
+</div>

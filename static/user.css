@@ -175,7 +175,7 @@ textarea:focus{
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
 }
 .gen-crop-recomendation form{
@@ -199,8 +199,23 @@ textarea:focus{
 .gen-crop-result{
     min-height: 20vh;
     margin: 5vh auto;
-    width: 30%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.gen-crop-result>div{
+    margin: auto;
 }
 .gen-crop-result h3,h4{
     text-align: left;
+}
+.cropimage{
+    width: auto;
+    height: 35vh;
+    border-radius:14px;
+}
+.result-data{
+    width: 40%;
 }
