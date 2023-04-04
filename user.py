@@ -38,6 +38,11 @@ def usercomplaints():
         return render_template('usercomplaints.html',data=res)
     return render_template('usercomplaints.html')
 
+#crop prediction dashboard to select two ways(4/4/23)
+@user.route('/croppredict',methods=['get','post'])
+def croppredict():
+    return render_template('croppredict.html')
+
 #general crop prediction by user inputs manually 
 @user.route('/gencropprediction',methods=['get','post'])
 def gencropprediction():
