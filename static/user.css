@@ -219,3 +219,14 @@ textarea:focus{
 .result-data{
     width: 50%;
 }
+.village-page{
+    min-height: 70vh;
+    height: max-content;
+}
+.village_form_div{
+    width: 40%;
+    min-height: 30vh;
+    margin: 2vh auto;
+    border: 1px solid rgb(15, 17, 15);
+    border-radius: 15px;
+}

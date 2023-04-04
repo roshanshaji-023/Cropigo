@@ -2,17 +2,57 @@
 <title>Cropigo -User</title>
 {% include 'userhead.html' %}
 <br><br><br>
-
+<section class="village-page">
 <h3>predict crop based on village<!--<span style="font-size: 10px;"> (Kerala)</span>--></h3>
 <br><br>
-<div class="village_form">
+<div class="village_form_div">
     <form action="" method="post">
-        <label for="select-district">District</label>
-
+        <br>
+        <label for="district">Select District:</label>
+	    <select id="district" name="district">
+            <option value="">--Select--</option>
+            <option value="Alappuzha">Alappuzha</option>
+            <option value="Ernakulam">Ernakulam</option>
+            <option value="Idukki">Idukki</option>
+            <option value="Kannur">Kannur</option>
+            <option value="Kasaragod">Kasaragod</option>
+            <option value="Kollam">Kollam</option>
+            <option value="Kottayam">Kottayam</option>
+            <option value="Kozhikode">Kozhikode</option>
+            <option value="Malappuram">Malappuram</option>
+            <option value="Palakkad">Palakkad</option>
+            <option value="Pathanamthitta">Pathanamthitta</option>
+            <option value="Thrissur">Thrissur</option>
+            <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+            <option value="Wayanad">Wayanad</option>
+	    </select><br><br><br>
+        <label for="village">Select Village:</label>
+        <select name="village" id="village">
+            <option value="">--Select--</option>
+        </select>
+        <br><br>
+        <button type="submit">predict</button>
     </form>
 </div>
- 
+
+
+</section>
 
 </section><!--end of user-dashboard section-->
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+<script>
+//code for selecting village
+
+var Alappuzha =[];
+var Ernakulam =[];
+var Idukki=[];
+
+</script>
+
 </body>
 </html>
