@@ -43,6 +43,13 @@ def usercomplaints():
 def croppredict():
     return render_template('croppredict.html')
 
+#crop prediction using village name
+@user.route('/village',methods=['get','post'])
+def village():
+    
+    return render_template('village.html')
+
+
 #general crop prediction by user inputs manually 
 @user.route('/gencropprediction',methods=['get','post'])
 def gencropprediction():
