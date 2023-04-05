@@ -6,11 +6,6 @@ from sklearn.ensemble import RandomForestClassifier
 import pickle
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import classification_report
-from sklearn import metrics
-from sklearn import tree
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -79,7 +74,7 @@ def gencropprediction():
             # load the fertilizer and season dataset
             fertilizer_season= pd.read_csv('static\cropfertilizer&season.csv')
 
-            fertilizer = fertilizer_season[fertilizer_season['crop'] == crop]['Fertilizer'].values[0]
+            fertilizer = fertilizer_season[fertilizer_season['Crop'] == crop]['Fertilizer'].values[0]
             season = fertilizer_season[fertilizer_season['Crop'] == crop]['Season'].values[0]
            
             
