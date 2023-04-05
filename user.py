@@ -72,14 +72,14 @@ def gencropprediction():
             prediction = RF.predict(data)
             print(prediction)
             crop=prediction[0]
-            
+            print(crop)
             #adding imagpath
             con=''.join(prediction)
             image=con+'.jpg'
             # load the fertilizer and season dataset
             fertilizer_season= pd.read_csv('static\cropfertilizer&season.csv')
 
-            fertilizer = fertilizer_season[fertilizer_season['Crop'] == crop]['Fertilizer'].values[0]
+            fertilizer = fertilizer_season[fertilizer_season['crop'] == crop]['Fertilizer'].values[0]
             season = fertilizer_season[fertilizer_season['Crop'] == crop]['Season'].values[0]
            
             
