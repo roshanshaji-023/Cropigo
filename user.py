@@ -44,20 +44,20 @@ def croppredict():
 @user.route('/village',methods=['get','post'])
 def village():
     if 'crop-predict' in request.form:
-        village=request.form.get('inputVillage')
-        print(village)
+        villagename=request.form.get('inputVillage')
+        print(villagename)
 
-        # load the fertilizer and season dataset
-        village_data=pd.read_csv('static\village_data.csv')
+        # load the village dataset
+        village_data= pd.read_csv('static\village.csv')
         
         #take values from csv
-        nitrogen=village_data[village_data['VILLAGES'] == village]['N'].values[0]
-        phosphorus=village_data[village_data['VILLAGES'] == village]['P'].values[0]
-        potassium=village_data[village_data['VILLAGES'] == village]['K'].values[0]
-        temperature=village_data[village_data['VILLAGES'] == village]['temperature'].values[0]
-        humidity=village_data[village_data['VILLAGES'] == village]['humidity'].values[0]
-        ph=village_data[village_data['VILLAGES'] == village]['ph'].values[0]
-        rainfall=village_data[village_data['VILLAGES'] == village]['rainfall'].values[0]
+        nitrogen=village_data[village_data['VILLAGES'] == villagename]['N'].values[0]
+        phosphorus=village_data[village_data['VILLAGES'] == villagename]['P'].values[0]
+        potassium=village_data[village_data['VILLAGES'] == villagename]['K'].values[0]
+        temperature=village_data[village_data['VILLAGES'] == villagename]['temperature'].values[0]
+        humidity=village_data[village_data['VILLAGES'] ==villagename]['humidity'].values[0]
+        ph=village_data[village_data['VILLAGES'] == villagename]['ph'].values[0]
+        rainfall=village_data[village_data['VILLAGES'] == villagename]['rainfall'].values[0]
         # Dump the trained Naive Bayes classifier with Pickle
         RF_pkl_filename = 'static\RandomForest.pkl'
         # Open the file to load pkl file
