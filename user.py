@@ -33,6 +33,8 @@ def usercomplaints():
         return render_template('usercomplaints.html',data=res)
     return render_template('usercomplaints.html')
 
+
+
 #crop prediction dashboard to select two ways(4/4/23)
 @user.route('/croppredict',methods=['get','post'])
 def croppredict():
@@ -41,7 +43,43 @@ def croppredict():
 #crop prediction using village name
 @user.route('/village',methods=['get','post'])
 def village():
-    
+    if 'crop-predict' in request.form:
+        village=request.form.get('inputVillage')
+        print(village)
+
+        # load the fertilizer and season dataset
+        village_data=pd.read_csv('static\village_data.csv')
+        
+        #take values from csv
+        nitrogen=village_data[village_data['VILLAGES'] == village]['N'].values[0]
+        phosphorus=village_data[village_data['VILLAGES'] == village]['P'].values[0]
+        potassium=village_data[village_data['VILLAGES'] == village]['K'].values[0]
+        temperature=village_data[village_data['VILLAGES'] == village]['temperature'].values[0]
+        humidity=village_data[village_data['VILLAGES'] == village]['humidity'].values[0]
+        ph=village_data[village_data['VILLAGES'] == village]['ph'].values[0]
+        rainfall=village_data[village_data['VILLAGES'] == village]['rainfall'].values[0]
+        # Dump the trained Naive Bayes classifier with Pickle
+        RF_pkl_filename = 'static\RandomForest.pkl'
+        # Open the file to load pkl file
+
+        with  open(RF_pkl_filename, 'rb') as RF_Model_pkl:
+            RF=pickle.load(RF_Model_pkl)
+        data = np.array([[nitrogen,phosphorus, potassium, temperature, humidity, ph, rainfall]])
+        prediction = RF.predict(data)
+        print(prediction)
+        crop=prediction[0]
+        print(crop)
+        #adding imagpath
+        con=''.join(prediction)
+        image=con+'.jpg'
+        # load the fertilizer and season dataset
+        fertilizer_season= pd.read_csv('static\cropfertilizer&season.csv')
+
+        fertilizer = fertilizer_season[fertilizer_season['Crop'] == crop]['Fertilizer'].values[0]
+        season = fertilizer_season[fertilizer_season['Crop'] == crop]['Season'].values[0]
+           
+            
+        return render_template('/resultpage.html',crop=crop,fertilizer=fertilizer,season=season,path=image)
     return render_template('village.html')
 
 
