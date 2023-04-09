@@ -48,7 +48,7 @@ def village():
         print(villagename)
 
         # load the village dataset
-        village_data= pd.read_csv('static\village.csv')
+        village_data= pd.read_csv("static\cropigovillage.csv")
         
         #take values from csv
         nitrogen=village_data[village_data['VILLAGES'] == villagename]['N'].values[0]
