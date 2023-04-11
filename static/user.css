@@ -83,7 +83,36 @@ input[type=text],input[type=email],input[type=number],textarea{
 input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,textarea:focus {
     outline: none;
 }
-
+.gov-links{
+    min-height: 30vh;
+    width: 70%;
+    display: flex;
+    margin: auto auto;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.gov-links>div{
+    width: 15%;
+    height: 20vh;
+    border-radius: 15px;
+    
+}
+.gov_img{
+    width:60%;
+}
+.soil-testing{
+ 
+  display: flex;
+  background-color: #effff1;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.soil-testing a{
+    font-size: 13px;
+}
 .complaint{
     width: 30%;
     height: 15vh;
