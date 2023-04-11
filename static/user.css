@@ -127,9 +127,10 @@ a{
 .back{
     text-decoration: none;
     color: black;
-    padding: 15px 20px;
+    padding: 10px 18px;
     border-radius: 9px;
     background-color: rgb(169, 255, 190);
+  
 }
 
 .complaint-dashboard{
@@ -229,10 +230,14 @@ textarea:focus{
 }
 .village_form_div{
     width: 40%;
-    min-height: 30vh;
+    min-height: 27vh;
     margin: 2vh auto;
-    border: 1px solid rgb(15, 17, 15);
+   
     border-radius: 15px;
+
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
 }
 .village-button{
     border-radius: 12px;
