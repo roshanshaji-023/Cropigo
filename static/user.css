@@ -100,18 +100,25 @@ input[type=text]:focus,input[type=email]:focus,input[type=number]:focus,textarea
     
 }
 .gov_img{
-    width:60%;
+    width:55%;
+}
+.agri-office{
+    display: flex;
+    background-color: #ffefef;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .soil-testing{
  
-  display: flex;
-  background-color: #effff1;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+    display: flex;
+    background-color: #f2efff;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .soil-testing a{
-    font-size: 13px;
+    font-size: 15px;
 }
 .complaint{
     width: 30%;
