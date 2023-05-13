@@ -239,6 +239,16 @@ textarea:focus{
     justify-content: space-around;
     background-color: rgba(162, 248, 147, 0.42);
 }
+.croppredict_footer{
+    width: 100%;
+    height: 30vh;
+    background-image: url(/static/images/tempbg.png);
+    background-repeat: no-repeat;
+    margin: auto auto;
+    background-position: center;
+    background-size: cover;
+}
+
 .gen-crop-recomendation button{
     padding: 8px 15px;
     background-color: #27c52e;
