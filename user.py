@@ -58,7 +58,7 @@ def village():
         humidity=village_data[village_data['VILLAGES'] ==villagename]['humidity'].values[0]
         ph=village_data[village_data['VILLAGES'] == villagename]['ph'].values[0]
         rainfall=village_data[village_data['VILLAGES'] == villagename]['rainfall'].values[0]
-        # Dump the trained Naive Bayes classifier with Pickle
+
         RF_pkl_filename = 'static\RandomForest.pkl'
         # Open the file to load pkl file
 
