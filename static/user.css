@@ -256,13 +256,17 @@ textarea:focus{
     border:0px solid green;
 }
 .gen-crop-result{
-    min-height: 20vh;
-    margin: 5vh auto;
+    min-height: 30vh;
+    margin: 2vh auto;
     width: 90%;
+    height: 45vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    border-radius: 15px;
     align-items: center;
+    background-color: #b4feb9;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .gen-crop-result>div{
     margin: auto;

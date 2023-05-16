@@ -2,11 +2,11 @@
 <title>CropiGo SignUp</title>
 <section class="signup">
     <br><br>
-    <h1>Create an Account</h1>
+    <h1 id="create">Create an Account</h1>
     <br>
-    <h3>{{message}}</h3>
+    <h3 id="message">{{message}}</h3>
     <br><br>
-    <div class="signup-form">
+    <div class="signup-form" id="signup-form">
         <form action="" method="post" >
             <br>
             <h3>Cropi<span style="color: #2ed47b;">Go</span> - lets farm better way</h3><br><br>
@@ -27,4 +27,19 @@
     </div>
     <br><br>
 </section>
+<script>
+    msg=document.getElementById("message").innerHTML
+    console.log(msg)
+    if (msg=="Account Created Succesfully!!"){
+        document.getElementById("message").style.color="green";
+        document.getElementById("signup-form").style.display="None";
+        document.getElementById("message").style.fontSize="200%";
+        document.getElementById("create").style.display="None";
+
+    }
+    else if(msg=="Account Already Exists!"){
+        document.getElementById("message").style.color="red";
+    }
+
+</script>
 {% include 'footer.html' %}
