@@ -3,7 +3,9 @@
 <section class="login">
     <br><br>
     <h1>Welcome back!</h1>
-    <br><br>
+    <br>
+    <h3 id="error_message">{{message}}</h3>
+    <br>
     <div class="login-form">
         <form action="" method="post">
             <br>
@@ -17,5 +19,11 @@
         </form>
     </div>
 </section>    
-
+<script>
+    msg=document.getElementById("error_message").innerHTML
+    if(msg=="Error | Invalid username or password!"){
+        document.getElementById("error_message").style.color="red";
+        document.getElementById("error_message").style.fontSize="150%"
+    }
+</script>
 {% include 'footer.html' %}

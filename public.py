@@ -44,6 +44,9 @@ def login():
                 
                 if uname==a and upassword==b:
                     return redirect(url_for('user.userdashboard'))
+        else:
+            message="Error | Invalid username or password!"
+            return render_template("login.html",message=message)
     return render_template('login.html')
 
 # Make function for logout session
